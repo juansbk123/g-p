@@ -1,0 +1,36 @@
+
+create database gp CHARACTER set utf8mb4 collate utf8mb4_spanish2_ci;
+
+
+ llevar registro de los cambios en archivos
+
+basar
+mercurial
+suversion
+live server
+
+/* CODIGOS IMPORTANTES*/
+
+
+ALTER TABLE `actividades` CHANGE `id_a` `id_a` INT(2) NOT NULL AUTO_INCREMENT;
+
+-- cuando se omita el campo en una inserción, éste tomara el valor de fecha y hora que tenga el servidor en ese momento--
+
+alter table foto add COLUMN fecha_foto TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP()
+
+
+se pude hace realaciones entre tablas cuando tiene datos 
+
+/**/
+insert into actividades(duracion_a,fecha_a,titulo_a)
+values(10,"31-02-2020","salida a la pisina")
+
+insert into actividades(duracion_a,fecha_a,titulo_a)
+values(5,"4-04-2020","peliculas en casa de juan")
+
+
+insert into foto(fecha_foto,nombre_foto)
+values("peliculas en casa de juan")
+
+insert into foto(nombre_foto)
+values("peliculas en casa de juan")
