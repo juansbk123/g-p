@@ -14,6 +14,65 @@ live server
 
 ALTER TABLE `actividades` CHANGE `id_a` `id_a` INT(2) NOT NULL AUTO_INCREMENT;
 
+-- cuando se omita el campo en una inserciï¿½n, ï¿½ste tomara el valor de fecha y hora que tenga el servidor en ese momento--
+
+alter table foto add COLUMN fecha_foto TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP()
+
+
+se pude hace realaciones entre tablas cuando tiene datos 
+
+/**/
+insert into actividades(duracion_a,fecha_a,titulo_a)
+values(10,"31-02-2020","salida a la pisina")
+
+insert into actividades(duracion_a,fecha_a,titulo_a)
+values(5,"4-04-2020","peliculas en casa de juan")
+
+
+insert into foto(fecha_foto,nombre_foto)
+values("peliculas en casa de juan")
+
+insert into foto(nombre_foto)
+values("peliculas en casa de juan")
+
+****************************************************
+insert into foto(nombre_f,url_f)
+values("en la pisina",load_file('/Documents/juan_gp/g-p/photos/6.png'));
+insert into foto(nombre_f,url_f)
+values("llegando de la piscina",load_file('/Documents/juan_gp/g-p/photos/7.png'));
+insert into foto(nombre_f,url_f)
+values("las mejores fotos de la piscina",load_file('/Documents/juan_gp/g-p/photos/8.png'));
+insert into foto(nombre_f,url_f)
+values("presentacion de la actividad a la iglesia",load_file('/Documents/juan_gp/g-p/photos/9.png'));
+insert into foto(nombre_f,url_f)
+values("presentacion del grupo pequeï¿½o(lo quemaditos)",load_file('/Documents/juan_gp/g-p/photos/10.png'));
+insert into foto(nombre_f,url_f)
+values("Dia del Joven Adventista",load_file('/Documents/juan_gp/g-p/photos/11.png'));
+insert into foto(nombre_f,url_f)
+values("cumpleaï¿½os del mes febrero",load_file('/Documents/juan_gp/g-p/photos/12.png'));
+insert into foto(nombre_f,url_f)
+values("miercoles de poder",load_file('/Documents/juan_gp/g-p/photos/13.png'));
+insert into foto(nombre_f,url_f)
+values("Grupo pequeï¿½o en la casa de el lider",load_file('/Documents/juan_gp/g-p/photos/14.png'));
+insert into foto(nombre_f,url_f)
+values("inicio de caleb",load_file('/Documents/juan_gp/g-p/photos/15.png'));
+insert into foto(nombre_f,url_f)
+values("mision caleb",load_file(''));
+create database gp CHARACTER set utf8mb4 collate utf8mb4_spanish2_ci;
+
+
+ llevar registro de los cambios en archivos
+
+basar
+mercurial
+suversion
+live server
+
+/* CODIGOS IMPORTANTES*/
+
+
+ALTER TABLE `actividades` CHANGE `id_a` `id_a` INT(2) NOT NULL AUTO_INCREMENT;
+
 -- cuando se omita el campo en una inserción, éste tomara el valor de fecha y hora que tenga el servidor en ese momento--
 
 alter table foto add COLUMN fecha_foto TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP()
