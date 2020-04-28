@@ -25,6 +25,8 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `foto`
 --
+create database if not exists gp;
+use gp;
 
 CREATE TABLE `foto` (
   `id_f` int(6) NOT NULL,
